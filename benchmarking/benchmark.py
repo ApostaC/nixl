@@ -152,7 +152,7 @@ def start_transfer(
                 print("Error in transfer")
                 break
     else:
-        while not agent.check_remote_xfer_done(peer_name, b"FINISHED"):
+        while not agent.check_remote_xfer_done(peer_name, "FINISHED"):
             continue
         print("Transfer finished in peer")
 
