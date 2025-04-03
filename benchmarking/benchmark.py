@@ -128,7 +128,7 @@ def initialize_xfer_metadata(
                 local_xfer_descs,
                 remote_xfer_descs,
                 peer_name,
-                b"FINISHED")
+                "FINISHED")
 
     return transfer_handle
 
@@ -152,7 +152,7 @@ def start_transfer(
                 print("Error in transfer")
                 break
     else:
-        while not agent.check_remote_xfer_done(peer_name, "FINISHED"):
+        while not agent.check_remote_xfer_done(peer_name, b"FINISHED"):
             continue
         print("Transfer finished in peer")
 
